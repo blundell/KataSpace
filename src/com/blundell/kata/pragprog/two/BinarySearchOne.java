@@ -1,5 +1,7 @@
 package com.blundell.kata.pragprog.two;
 
+import static com.blundell.kata.LogUtils.print;
+
 /**
  * http://codekata.pragprog.com/2007/01/kata_two_karate.html
  * 
@@ -52,13 +54,5 @@ public class BinarySearchOne {
 		}
 
 		return -1;
-	}
-
-	private static void print(int[] in) {
-		System.out.print("[");
-		for (int i = 0; i < in.length; i++) {
-			System.out.print(" " + in[i] + " ");
-		}
-		System.out.println("]");
 	}
 }
