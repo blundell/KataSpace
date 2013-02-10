@@ -5,8 +5,8 @@ My own hacking nothing special
 
 [PragProg](http://codekata.pragprog.com/2007/01/code_kata_backg.html#more):
 
-  1. Supermarket Pricing - *Done*
-  2. Karate Chop - **In Progress**
+  1. [Supermarket Pricing](http://codekata.pragprog.com/2007/01/code_kata_one_s.html) - *Done*
+  2. [Karate Chop](http://codekata.pragprog.com/2007/01/kata_two_karate.html) - **In Progress**
   3. How Big, How Fast?
   4. Data Munging
   5. Bloom Filters
