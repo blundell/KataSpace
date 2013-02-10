@@ -5,6 +5,8 @@ import static com.blundell.kata.LogUtils.print;
 /**
  * http://codekata.pragprog.com/2007/01/kata_two_karate.html
  * 
+ * Functional?
+ * 
  * This is a failed strategy, not only does it not work, it can't return the position in the original array the item was at
  * scrapped and started again
  * 
