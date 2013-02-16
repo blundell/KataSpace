@@ -30,32 +30,32 @@ public class MergeSortTwo {
 
 	private static void merge(int[] array, int low, int midpoint, int high) {
 		int[] temp = new int[high - low + 1];
-		int left = low;
-		int right = midpoint + 1;
-		int k = 0;
+		int leftIndex = low;
+		int rightIndex = midpoint + 1;
+		int tempIndex = 0;
 
-		while (left <= midpoint && right <= high) {
-			if (array[left] < array[right]) {
-				temp[k] = array[left];
-				left++;
+		while (leftIndex <= midpoint && rightIndex <= high) {
+			if (array[leftIndex] < array[rightIndex]) {
+				temp[tempIndex] = array[leftIndex];
+				leftIndex++;
 			} else {
-				temp[k] = array[right];
-				right++;
+				temp[tempIndex] = array[rightIndex];
+				rightIndex++;
 			}
-			k++;
+			tempIndex++;
 		}
 
-		if (left <= midpoint) {
-			while (left <= midpoint) {
-				temp[k] = array[left];
-				left++;
-				k++;
+		if (leftIndex <= midpoint) {
+			while (leftIndex <= midpoint) {
+				temp[tempIndex] = array[leftIndex];
+				leftIndex++;
+				tempIndex++;
 			}
-		} else if (right <= high) {
-			while (right <= high) {
-				temp[k] = array[right];
-				right++;
-				k++;
+		} else if (rightIndex <= high) {
+			while (rightIndex <= high) {
+				temp[tempIndex] = array[rightIndex];
+				rightIndex++;
+				tempIndex++;
 			}
 		}
 
