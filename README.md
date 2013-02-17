@@ -3,11 +3,14 @@ KataSpace
 
 My own hacking nothing special
 
+[MergeSort](https://www.youtube.com/watch?v=XaqR3G_NVoo)
+ = [src package](https://github.com/blundell/KataSpace/tree/master/src/com/blundell/kata/mergesort)
+ 
 [CareerCup](http://www.careercup.com/page)
- - [Package](https://github.com/blundell/KataSpace/tree/master/src/com/blundell/kata/careercup)
+ = [src package](https://github.com/blundell/KataSpace/tree/master/src/com/blundell/kata/careercup)
 
-[PragProg](http://codekata.pragprog.com/2007/01/code_kata_backg.html#more):
- = [Package](https://github.com/blundell/KataSpace/tree/master/src/com/blundell/kata/pragprog)
+[PragProg](http://codekata.pragprog.com/2007/01/code_kata_backg.html#more)
+ = [src package](https://github.com/blundell/KataSpace/tree/master/src/com/blundell/kata/pragprog)
 
   1. [Supermarket Pricing](http://codekata.pragprog.com/2007/01/code_kata_one_s.html) - *Done*
   2. [Karate Chop](http://codekata.pragprog.com/2007/01/kata_two_karate.html) - *Done*
@@ -31,5 +34,4 @@ My own hacking nothing special
   20. Klondike
   21. Simple Lists
 
-[MergeSort](https://www.youtube.com/watch?v=XaqR3G_NVoo)
- - [Package](https://github.com/blundell/KataSpace/tree/master/src/com/blundell/kata/mergesort)
+
