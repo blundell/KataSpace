@@ -1,6 +1,6 @@
 package com.blundell.kata.harrypotter;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -13,7 +13,7 @@ public class HarryPotterKataShould {
 
     @Before
     public void setUp() {
-        kata = new HarryPotterKata(new ArrayList<RowlingBook>());
+        kata = new HarryPotterKata(new HashMap<RowlingBook, Integer>());
     }
 
     @Test
@@ -29,4 +29,11 @@ public class HarryPotterKataShould {
         assertEquals(16D, kata.total());
     }
 
+    @Test
+    public void testTwoBooksDifferent_costs$15_2() throws Exception {
+        kata.buy(RowlingBook.ONE);
+        kata.buy(RowlingBook.TWO);
+
+        assertEquals(15.2D, kata.total());
+    }
 }
