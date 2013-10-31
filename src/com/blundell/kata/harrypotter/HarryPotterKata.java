@@ -1,10 +1,22 @@
 package com.blundell.kata.harrypotter;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class HarryPotterKata {
 
     private static final int MAX_DISCOUNT = 25;
+    public static final Map<Integer, Integer> discountLookup = new HashMap<Integer, Integer>();
+
+    static {
+        discountLookup.put(0, 0);
+        discountLookup.put(1, 0);
+        discountLookup.put(2, 5);
+        discountLookup.put(3, 10);
+        discountLookup.put(4, 20);
+        discountLookup.put(5, 25);
+    }
+
     private Map<RowlingBook, Integer> books;
 
     public HarryPotterKata(Map<RowlingBook, Integer> books) {
@@ -29,9 +41,9 @@ public class HarryPotterKata {
             return totalPrice;
         }
 
-        int discountRatio = books.size() - 1;
+        int discountRatio = books.size();
 
-        double discountPercentage = discountRatio * 5;
+        double discountPercentage = discountLookup.get(discountRatio);
 
         if (discountPercentage > MAX_DISCOUNT) {
             discountPercentage = MAX_DISCOUNT;

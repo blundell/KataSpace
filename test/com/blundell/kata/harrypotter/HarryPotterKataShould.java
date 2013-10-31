@@ -18,11 +18,13 @@ public class HarryPotterKataShould {
 
     @Test
     public void testNoBooks_costs$0_0() throws Exception {
+        System.out.println("Test __ 1");
         assertEquals(0D, kata.total());
     }
 
     @Test
     public void testTwoBooksTheSame_costs$16_0() throws Exception {
+        System.out.println("Test __ 2");
         kata.buy(RowlingBook.ONE);
         kata.buy(RowlingBook.ONE);
 
@@ -31,6 +33,7 @@ public class HarryPotterKataShould {
 
     @Test
     public void testTwoBooksDifferent_costs$15_2() throws Exception {
+        System.out.println("Test __ 3");
         kata.buy(RowlingBook.ONE);
         kata.buy(RowlingBook.TWO);
 
@@ -39,11 +42,23 @@ public class HarryPotterKataShould {
 
     @Test
     public void testThreeBooksDifferent_costs$21_6() throws Exception {
+        System.out.println("Test __ 4");
         kata.buy(RowlingBook.ONE);
         kata.buy(RowlingBook.TWO);
         kata.buy(RowlingBook.THREE);
 
         assertEquals(21.6D, kata.total());
+    }
+
+    @Test
+    public void testFourBooksDifferent_costs$25_6() throws Exception {
+        System.out.println("Test __ 5");
+        kata.buy(RowlingBook.ONE);
+        kata.buy(RowlingBook.TWO);
+        kata.buy(RowlingBook.THREE);
+        kata.buy(RowlingBook.FOUR);
+
+        assertEquals(25.6D, kata.total());
     }
 
 }
