@@ -5,7 +5,6 @@ import java.util.Map;
 
 public class HarryPotterKata {
 
-    private static final int MAX_DISCOUNT = 25;
     public static final Map<Integer, Integer> discountLookup = new HashMap<Integer, Integer>();
 
     static {
@@ -32,24 +31,26 @@ public class HarryPotterKata {
     }
 
     public double total() {
+        int totalBooks = 0;
         double totalPrice = 0D;
-        for (Integer integer : books.values()) {
-            totalPrice += (integer * 8);
+        int uniqueBookCount = 0;
+        for (Integer bookCount : books.values()) {
+            totalBooks += bookCount;
+            totalPrice += (bookCount * 8);
+            if (bookCount == 1) {
+                uniqueBookCount++;
+            }
         }
 
-        if (books.size() == 1) {
-            return totalPrice;
-        }
+        int bookTypesCount = books.size();
 
-        int discountRatio = books.size();
+        double discountPercentage = discountLookup.get(bookTypesCount);
 
-        double discountPercentage = discountLookup.get(discountRatio);
+        double nonDiscountApplicablePrice = (totalBooks - uniqueBookCount) * 8;
 
-        if (discountPercentage > MAX_DISCOUNT) {
-            discountPercentage = MAX_DISCOUNT;
-        }
+        double totalDiscount = (discountPercentage / 100) * (totalPrice - nonDiscountApplicablePrice);
 
-        totalPrice -= (discountPercentage / 100) * totalPrice;
+        totalPrice -= totalDiscount;
 
         return totalPrice;
     }
