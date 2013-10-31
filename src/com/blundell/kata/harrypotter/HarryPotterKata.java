@@ -20,10 +20,6 @@ public class HarryPotterKata {
     }
 
     public double total() {
-        if (books.isEmpty()) {
-            return 0;
-        }
-
         double totalPrice = 0D;
         for (Integer integer : books.values()) {
             totalPrice += (integer * 8);
