@@ -6,7 +6,12 @@ bin
 .classpath
 .project
 
-# Package Files #
+# Intellij
+
+.idea
+*.iml
+
+# Package Files
 *.jar
 *.war
 *.ear
