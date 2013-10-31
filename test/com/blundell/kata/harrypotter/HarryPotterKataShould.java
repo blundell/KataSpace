@@ -36,4 +36,14 @@ public class HarryPotterKataShould {
 
         assertEquals(15.2D, kata.total());
     }
+
+    @Test
+    public void testThreeBooksDifferent_costs$21_6() throws Exception {
+        kata.buy(RowlingBook.ONE);
+        kata.buy(RowlingBook.TWO);
+        kata.buy(RowlingBook.THREE);
+
+        assertEquals(21.6D, kata.total());
+    }
+
 }
