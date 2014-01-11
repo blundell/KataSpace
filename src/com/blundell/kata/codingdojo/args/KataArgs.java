@@ -5,8 +5,17 @@ package com.blundell.kata.codingdojo.args;
  */
 public class KataArgs {
 
-    public static void main(String[] args) {
-        System.out.println("init");
+    private final String schema;
+
+    public KataArgs(String schema) {
+        this.schema = schema;
     }
 
+    public void parse(String[] args) {
+
+    }
+
+    public boolean get(String flag) {
+        return true;
+    }
 }
