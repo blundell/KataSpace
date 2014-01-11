@@ -11,7 +11,7 @@ My own hacking nothing special
 
 [Coding Dojo](http://codingdojo.org/)
  = [src package](https://github.com/blundell/KataSpace/tree/master/src/com/blundell/kata/codingdojo)
-  1. [Kata Args](http://codingdojo.org/cgi-bin/wiki.pl?KataArgs)
+  1. [Kata Args](http://codingdojo.org/cgi-bin/wiki.pl?KataArgs)  **unfinished**
 
 [Cyber Dojo](http://www.cyber-dojo.com/setup/show)
 

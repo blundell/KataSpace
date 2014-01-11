@@ -36,6 +36,24 @@ public class KataArgsTest {
         assertNoException();
     }
 
+    @Test
+    public void testParseTrueReturnsTrue() {
+        KataArgs parser = new KataArgs("1|boolean|a");
+
+        parser.parse("-a");
+
+        assertTrue(parser.get("-a"));
+    }
+
+    @Test
+    public void testParseFalseReturnsFalse() {
+        KataArgs parser = new KataArgs("1|boolean|a");
+
+        parser.parse("");
+
+        assertTrue(parser.get("-a"));
+    }
+
     public void assertNoException() {
         assertTrue(true);
     }
