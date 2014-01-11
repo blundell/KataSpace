@@ -7,10 +7,17 @@ import static org.junit.Assert.assertTrue;
 public class KataArgsTest {
 
     @Test(expected = KataArgs.ParseException.class)
+    public void testEmptyArgsThrowsException() {
+        KataArgs parser = new KataArgs("");
+
+        parser.parse("");
+    }
+
+    @Test(expected = KataArgs.ParseException.class)
     public void testSchemeNotMatchingInputThrowsException() {
         KataArgs parser = new KataArgs("1|b");
 
-        parser.parse("");
+        parser.parse("-s");
     }
 
     @Test
