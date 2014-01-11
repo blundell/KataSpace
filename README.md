@@ -13,6 +13,8 @@ My own hacking nothing special
  = [src package](https://github.com/blundell/KataSpace/tree/master/src/com/blundell/kata/codingdojo)
   1. [Kata Args](http://codingdojo.org/cgi-bin/wiki.pl?KataArgs)
 
+[Cyber Dojo](http://www.cyber-dojo.com/setup/show)
+
 [PragProg](http://codekata.pragprog.com/2007/01/code_kata_backg.html#more)
  = [src package](https://github.com/blundell/KataSpace/tree/master/src/com/blundell/kata/pragprog)
 
