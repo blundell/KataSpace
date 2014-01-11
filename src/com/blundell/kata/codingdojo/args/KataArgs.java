@@ -20,10 +20,6 @@ public class KataArgs {
         }
     }
 
-    public boolean get(String flag) {
-        return true;
-    }
-
     protected static class ParseException extends RuntimeException {
 
     }
