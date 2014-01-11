@@ -14,6 +14,13 @@ public class KataArgsTest {
     }
 
     @Test(expected = KataArgs.ParseException.class)
+    public void testEmptySchemaWithArgsThrowsException() {
+        KataArgs parser = new KataArgs("");
+
+        parser.parse("-b");
+    }
+
+    @Test(expected = KataArgs.ParseException.class)
     public void testSchemeNotMatchingInputThrowsException() {
         KataArgs parser = new KataArgs("1|b");
 
