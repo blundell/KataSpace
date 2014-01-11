@@ -9,6 +9,10 @@ My own hacking nothing special
 [CareerCup](http://www.careercup.com/page)
  = [src package](https://github.com/blundell/KataSpace/tree/master/src/com/blundell/kata/careercup)
 
+[Coding Dojo](http://codingdojo.org/)
+ = [src package](https://github.com/blundell/KataSpace/tree/master/src/com/blundell/kata/codingdojo)
+  1. [Kata Args](http://codingdojo.org/cgi-bin/wiki.pl?KataArgs)
+
 [PragProg](http://codekata.pragprog.com/2007/01/code_kata_backg.html#more)
  = [src package](https://github.com/blundell/KataSpace/tree/master/src/com/blundell/kata/pragprog)
 
