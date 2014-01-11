@@ -5,6 +5,8 @@ package com.blundell.kata.codingdojo.args;
  */
 public class KataArgs {
 
+    private static final String DELIM_COUNT_AND_NAME = "|";
+
     private final String schema;
 
     public KataArgs(String schema) {
@@ -12,7 +14,10 @@ public class KataArgs {
     }
 
     public void parse(String... args) {
-        throw new ParseException();
+        String arg = args[0].replace("-", "");
+        if (arg.isEmpty() || !schema.contains(arg)) {
+            throw new ParseException();
+        }
     }
 
     public boolean get(String flag) {
