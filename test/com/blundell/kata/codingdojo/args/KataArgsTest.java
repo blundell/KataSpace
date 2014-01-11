@@ -22,16 +22,16 @@ public class KataArgsTest {
 
     @Test(expected = KataArgs.ParseException.class)
     public void testSchemeNotMatchingInputThrowsException() {
-        KataArgs parser = new KataArgs("1|b");
+        KataArgs parser = new KataArgs("1|boolean|a");
 
         parser.parse("-s");
     }
 
     @Test
     public void testSchemeMatchingInputDoesntThrowException() {
-        KataArgs parser = new KataArgs("1|b");
+        KataArgs parser = new KataArgs("1|boolean|a");
 
-        parser.parse("-b");
+        parser.parse("-a");
 
         assertNoException();
     }
