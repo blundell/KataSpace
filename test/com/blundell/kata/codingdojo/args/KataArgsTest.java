@@ -14,4 +14,10 @@ public class KataArgsTest {
         assertEquals(true, parser.get("boolFlag"));
     }
 
+    @Test(expected = KataArgs.ParseException.class)
+    public void testSchemeNotMatchingInputThrowsException() {
+        KataArgs kataArgs = new KataArgs("1,b");
+
+        kataArgs.parse("");
+    }
 }

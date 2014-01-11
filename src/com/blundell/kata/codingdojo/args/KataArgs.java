@@ -11,11 +11,15 @@ public class KataArgs {
         this.schema = schema;
     }
 
-    public void parse(String[] args) {
-
+    public void parse(String... args) {
+        throw new ParseException();
     }
 
     public boolean get(String flag) {
         return true;
+    }
+
+    protected static class ParseException extends RuntimeException {
+
     }
 }
