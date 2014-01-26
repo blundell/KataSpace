@@ -14,6 +14,7 @@ My own hacking nothing special
   1. [Kata Args](http://codingdojo.org/cgi-bin/wiki.pl?KataArgs)  **unfinished**
 
 [Cyber Dojo](http://www.cyber-dojo.com/setup/show)
+ = [src package](https://github.com/blundell/KataSpace/tree/master/src/com/blundell/kata/cyberdojo)
 
 [PragProg](http://codekata.pragprog.com/2007/01/code_kata_backg.html#more)
  = [src package](https://github.com/blundell/KataSpace/tree/master/src/com/blundell/kata/pragprog)
