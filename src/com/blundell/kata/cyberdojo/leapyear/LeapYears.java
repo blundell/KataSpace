@@ -1,4 +1,4 @@
-package com.blundell.kata.leapyear;
+package com.blundell.kata.cyberdojo.leapyear;
 
 public class LeapYears {
 

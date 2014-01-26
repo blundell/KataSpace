@@ -1,4 +1,4 @@
-package com.blundell.kata.harrypotter;
+package com.blundell.kata.cyberdojo.harrypotter;
 
 import java.util.HashMap;
 
