@@ -5,29 +5,21 @@ package com.blundell.kata.sevendigital;
  */
 public class Checkout {
 
-    Discounter discounterA = new DiscounterA();
-    Discounter discounterB = new DiscounterB();
+    Pricer pricerA = new PricerA();
+    Pricer pricerB = new PricerB();
+    Pricer pricerC = new PricerC();
+    Pricer pricerD = new PricerD();
 
     public int scan(Item... items) {
 
         int total = 0;
         for (Item item : items) {
-            checkForDiscount(item);
-            total += item.getPrice();
-            total = applyDiscounts(total);
+            total += pricerA.calculatePrice(item);
+            total += pricerB.calculatePrice(item);
+            total += pricerC.calculatePrice(item);
+            total += pricerD.calculatePrice(item);
         }
 
-        return total;
-    }
-
-    private void checkForDiscount(Item item) {
-        discounterA.checkForDiscountPossibility(item);
-        discounterB.checkForDiscountPossibility(item);
-    }
-
-    private int applyDiscounts(int total) {
-        total = discounterA.potentiallyApplyDiscount(total);
-        total = discounterB.potentiallyApplyDiscount(total);
         return total;
     }
 
@@ -71,35 +63,35 @@ public class Checkout {
         }
     }
 
-    public static abstract class Discounter {
+    static abstract class Pricer {
 
         int howMany = 0;
         final int groupDiscount;
         final int discountAmount;
-        int subTotal = 0;
 
-        Discounter(int groupDiscount, int discountAmount) {
+        Pricer(int groupDiscount, int discountAmount) {
             this.groupDiscount = groupDiscount;
             this.discountAmount = discountAmount;
         }
 
-        void add(Item item) {
-            if (isDiscountableItem(item)) {
-                howMany++;
-                subTotal += item.getPrice();
+        public int calculatePrice(Item item) {
+            if (!isCorrectItemType(item)) {
+                return 0;
             }
-            potentiallyApplyDiscount(subTotal);
+            checkForDiscountPossibility(item);
+            return potentiallyApplyDiscount(item.getPrice());
+
         }
 
-        public void checkForDiscountPossibility(Item item) {
-            if (isDiscountableItem(item)) {
+        protected abstract boolean isCorrectItemType(Item item);
+
+        private void checkForDiscountPossibility(Item item) {
+            if (isCorrectItemType(item)) {
                 howMany++;
             }
         }
 
-        protected abstract boolean isDiscountableItem(Item item);
-
-        public int potentiallyApplyDiscount(int total) {
+        private int potentiallyApplyDiscount(int total) {
             if (hitDiscountTotal()) {
                 total = applyDiscount(total);
                 howMany = 0;
@@ -117,27 +109,51 @@ public class Checkout {
 
     }
 
-    public static class DiscounterA extends Discounter {
+    static class PricerA extends Pricer {
 
-        DiscounterA() {
+        PricerA() {
             super(3, 20);
         }
 
         @Override
-        protected boolean isDiscountableItem(Item item) {
+        protected boolean isCorrectItemType(Item item) {
             return item instanceof A;
         }
     }
 
-    public static class DiscounterB extends Discounter {
+    static class PricerB extends Pricer {
 
-        DiscounterB() {
+        PricerB() {
             super(2, 15);
         }
 
         @Override
-        protected boolean isDiscountableItem(Item item) {
+        protected boolean isCorrectItemType(Item item) {
             return item instanceof B;
+        }
+    }
+
+    static class PricerC extends Pricer {
+
+        PricerC() {
+            super(-1, 0);
+        }
+
+        @Override
+        protected boolean isCorrectItemType(Item item) {
+            return item instanceof C;
+        }
+    }
+
+    static class PricerD extends Pricer {
+
+        PricerD() {
+            super(-1, 0);
+        }
+
+        @Override
+        protected boolean isCorrectItemType(Item item) {
+            return item instanceof D;
         }
     }
 
