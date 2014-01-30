@@ -42,3 +42,5 @@ My own hacking nothing special
   21. Simple Lists
 
 
+[CareerCup](https://github.com/7digital/kata-checkout)
+ = [src package](https://github.com/blundell/KataSpace/blob/master/test/com/blundell/kata/sevendigital/)
